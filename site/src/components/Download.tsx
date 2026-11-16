@@ -4,6 +4,8 @@ export const REPO = "https://github.com/tanishqagg-dev/wassup";
 export const DMG = `${REPO}/releases/latest/download/wassup.dmg`;
 /** Flip to true once a release has a notarized wassup.dmg attached (see docs/releasing.md). */
 export const MAC_APP_READY = false;
+/** Homebrew asks you to trust a third-party tap once before it loads it. */
+export const BREW = "brew tap tanishqagg-dev/tap && brew trust tanishqagg-dev/tap && brew install wassup";
 
 /** The one green thing on the page. */
 export function DownloadButton({ small = false }: { small?: boolean }) {

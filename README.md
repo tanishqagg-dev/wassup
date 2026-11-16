@@ -62,7 +62,8 @@ Every person runs their own wassup. There's no shared server and nobody else's a
 **Command line:**
 
 ```bash
-brew install tanishqagg-dev/tap/wassup          # macOS (and Linux Homebrew)
+brew tap tanishqagg-dev/tap && brew trust tanishqagg-dev/tap   # Homebrew asks you to trust a new tap once
+brew install wassup                            # macOS (and Linux Homebrew)
 curl -fsSL https://raw.githubusercontent.com/tanishqagg-dev/wassup/main/install.sh | sh
 go install github.com/tanishqagg-dev/wassup/cmd/wassup@latest   # Go 1.26+
 ```

@@ -5,7 +5,7 @@ import { Statement, Track, ToolIndex, Safety, Terminal } from "./components/Sect
 import { SetupShowcase } from "./components/SetupShowcase";
 import { Command } from "./components/Command";
 import { Mark } from "./components/Logo";
-import { DownloadButton, MAC_APP_READY, REPO } from "./components/Download";
+import { BREW, DownloadButton, MAC_APP_READY, REPO } from "./components/Download";
 import { Ticks, type TickState } from "./components/Ticks";
 
 function Nav() {
@@ -100,7 +100,7 @@ function Hero() {
         <p className="hero-sub">wassup gives Claude and other AI apps your WhatsApp. They read, reply and wait for answers. Nothing goes out until you tap yes.</p>
         <div className="hero-actions">
           <DownloadButton />
-          <Command cmd="brew install tanishqagg-dev/tap/wassup" />
+          <Command cmd={BREW} />
         </div>
         <p className="fine">
           Free and open source · macOS 14 or later · also on <a href="#download">Linux and Windows</a>
@@ -125,8 +125,8 @@ const PLATFORMS = [
   },
   {
     t: "Homebrew",
-    d: "The command line and MCP server on its own. Then run wassup setup.",
-    cmd: "brew install tanishqagg-dev/tap/wassup",
+    d: "The command line and MCP server on its own. Homebrew asks you to trust a new tap once; that's the middle step. Then run wassup setup.",
+    cmd: BREW,
   },
   {
     t: "Linux",
@@ -151,7 +151,7 @@ function Payoff() {
         Two blue ticks.
       </h2>
       <p className="lede">You read the whole thing. Now let your AI handle the small messages, and say yes to the ones that go out.</p>
-      <div className="hero-actions">{MAC_APP_READY ? <DownloadButton /> : <Command cmd="brew install tanishqagg-dev/tap/wassup" />}</div>
+      <div className="hero-actions">{MAC_APP_READY ? <DownloadButton /> : <Command cmd={BREW} />}</div>
       <div className="platforms" data-fade>
         {PLATFORMS.map((p) => (
           <div className="plat lit" key={p.t}>
