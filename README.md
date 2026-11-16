@@ -2,7 +2,7 @@
 
 # wassup
 
-WhatsApp from your terminal and from your AI apps. Claude (web, Desktop, phone, Code), Codex, Cursor and scripts can read, search, send and wait for messages on your own account, with your approval where it matters.
+WhatsApp from your terminal and from your AI apps. [wassup-jade.vercel.app](https://wassup-jade.vercel.app) Claude (web, Desktop, phone, Code), Codex, Cursor and scripts can read, search, send and wait for messages on your own account, with your approval where it matters.
 
 ```bash
 wassup setup                                   # link your phone and connect your AI apps, in plain words
